@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cinematic AI Video Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header1">
+        <button>Home</button>
+        <button>Galary</button>
+        <button>Support</button>
+    </div>
+
+    <div class="container">
+        <h1>Cinematic AI Video Generator</h1>
+        <div class="form-card">
+            <label for="prompt">Prompt:</label>
+            <input type="text" id="prompt" placeholder="Enter your prompt...">
+            <label for="num_images">Number of Images:</label>
+            <input type="number" id="num_images" placeholder="Number of images" value="10" min="1" max="20">
+            <label for="fps">Frames Per Second (FPS):</label>
+            <input type="number" id="fps" placeholder="FPS" value="6" min="1" max="60">
+            <button id="generate-btn" onclick="generateVideo()">Generate Video</button>
+            <div id="loading" style="display:none; margin-top:10px;">Generating video, please wait...</div>
+            <div id="message" style="margin-top:10px;"></div>
+        </div>
+        <div id="video-container" style="margin-top:20px;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
